@@ -1,27 +1,16 @@
-import boto3
-import json
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import current_date, lit
 spark = SparkSession.builder.appName("etl-py") \
     .getOrCreate()
 
 def makeDFJDBC(conex:dict, table:str, pks:dict, makeTmpView:bool, type_format = None):
 
-# search DB credentials in AWS Secrets Manager
-    aws_secrets = boto3.client(
-        "secretsmanager"
-        , region_name = "us-east-1"
-    )
+    # search DB credentials in AWS Secrets Manager
 
-    aws_secrets = json.loads(
-        aws_secrets.get_secret_value(SecretId="HANA-connection")['SecretString']
-    )
-
-    url = aws_secrets['url']
-    user = aws_secrets['user']
-    password = aws_secrets['password']
-    database = aws_secrets['database']
-    driver = aws_secrets['driver']
+    url = conex.getUrl()
+    user = conex.getUsr()
+    password = conex.getPas()
+    database = conex.getDb()
+    driver = conex.getDve()
     query = "select {} tab.* from SAP_PRD.{} as tab"
 
     if (len(pks) == 0):
