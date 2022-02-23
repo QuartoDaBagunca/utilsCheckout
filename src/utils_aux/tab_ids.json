@@ -1,0 +1,76 @@
+{"balanco_dre":
+    {
+        "FAGL_011PC": {
+            "pk": [
+                "versn",
+                "ergsl"
+            ],
+            "estrutura": [
+            ]
+        },
+        "FAGL_011QT": {
+            "pk": [
+                "versn",
+                "txtyp",
+                "ergsl"
+            ],
+            "estrutura": [
+            ]
+        },
+        "FAGL_011ZC": {
+            "pk": [
+                "versn",
+                "vonkt",
+                "ergsl"
+            ],
+            "estrutura": [
+            ]
+        },
+        "GLT0": {
+            "pk": [
+            ],
+            "estrutura": [
+            ]
+        },
+        "SKA1": {
+            "pk": [
+                "saknr"
+            ],
+            "estrutura": [
+            ]
+        },
+        "SKAT": {
+            "pk": [
+                "saknr"
+            ],
+            "estrutura": [
+            ]
+        },
+        "T077Z": {
+            "pk": [
+                "ktoks"
+            ],
+            "estrutura": [
+            ]
+        },
+        "T011T": {
+            "pk": [
+                "mandt",
+                "versn"
+            ],
+            "estrutura": [
+            ]
+        }
+    },
+"contas_a_receber":
+    {
+        "FAGL_011PC": {
+            "pk": [
+                "versn",
+                "ergsl"
+            ],
+            "estrutura": [
+            ]
+        }
+    }
+}
