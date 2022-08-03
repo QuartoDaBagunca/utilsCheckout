@@ -38,4 +38,4 @@ docker run -it \
         -v $(pwd)/main.py:/opt/spark/python/main.py \
         --rm sparkenv /bin/bash
 ```
-> Na execução do container temos uma linha que mapeia o arquivo main.py como volume dentro do container, isso quer dizer que qualquer alteração feita no arquivo será refletida e poderá ser testada com a execução dentro do container como se estivessemos executando na maquina local. Essa linha `$(pwd)/main.py:/opt/spark/python/remarcacao_psc.py` pode ser replicada pra qualquer outro script que se deseje testar dentro do container
+> Na execução do container temos uma linha que mapeia o arquivo main.py como volume dentro do container, isso quer dizer que qualquer alteração feita no arquivo será refletida e poderá ser testada com a execução dentro do container como se estivessemos executando na maquina local. Essa linha `$(pwd)/main.py:/opt/spark/python/main.py` pode ser replicada pra qualquer outro script que se deseje testar dentro do container
